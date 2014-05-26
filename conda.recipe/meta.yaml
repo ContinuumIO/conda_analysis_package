@@ -8,7 +8,8 @@ requirements:
     
   run:
     - python
-
+    - conda
+    - conda-build
 # The build number should be incremented for new builds of the same version
 build:            # (optional)
   number: 1
