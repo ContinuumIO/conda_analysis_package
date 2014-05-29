@@ -129,7 +129,9 @@ def clone_analysispackage(path, prefix=None, analysispackage_name=None, data_pat
         raise RuntimeError('bad tar archive: %s' % path)
     except KeyError:
         raise RuntimeError("no archive 'info/index.json' in: %s" % (path))
-
+    if prefix and isdir(prefix):
+        print ("erasing old environment at %s" % prefix)
+        shutil.rmtree(prefix)
     if prefix and not isdir(prefix):
         for m in t.getmembers():
             if m.path.startswith((BDP, 'info/')):
