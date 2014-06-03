@@ -152,7 +152,8 @@ def clone_analysispackage(path, prefix=None, analysispackage_name=None, data_pat
         if m.path.startswith(BDP):
             targetpath = join(analysispackage_dir, m.path[len(BDP):])
             t._extract_member(m, targetpath)
-
+    with open(join(data_path, ".metadata.json"), "w+") as f:
+        json.dump({'env' : prefix}, f)
     t.close()
 
 
