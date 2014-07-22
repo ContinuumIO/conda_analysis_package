@@ -142,7 +142,7 @@ def clone_analysispackage(path, prefix=None, analysispackage_name=None, data_pat
         actions = plan.ensure_linked_actions(dists, prefix)
         index = get_index()
         plan.display_actions(actions, index)
-        plan.execute_actions(actions, index, verbose=True)
+        plan.execute_actions(actions, index, verbose=False)
     if not data_path:
         analysispackage_dir = abspath(expanduser('~/analysispackages/%s' %
                                         (analysispackage_name or meta.get('analysispackage_name'))))
