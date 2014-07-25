@@ -12,7 +12,7 @@ if sys.version_info[:2] < (2, 7):
 
 setup(
     name = "conda-analysis-package",
-    version="0.1",
+    version="0.2.0",
     author = "Continuum Analytics, Inc.",
     author_email = "ilan@continuum.io",
     url = "https://github.com/ContinuumIO/conda-analysispackage",
