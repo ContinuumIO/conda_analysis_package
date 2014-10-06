@@ -12,8 +12,9 @@ requirements:
 
 # The build number should be incremented for new builds of the same version
 build:            # (optional)
-  number: {{environ.get('BINSTAR_BUILD', 1)}}
-    
+  number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+  string: py{{environ.get('PY_VER').replace('.', '')}}_{{ environ.get('GIT_BUILD_STR', 'GIT_STUB') }}
+
 about:
   home: https://github.com/ContinuumIO/conda_analysis_package
   license: MIT License
