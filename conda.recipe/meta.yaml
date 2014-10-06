@@ -1,6 +1,6 @@
 package:
   name: conda_analysispackage
-  version: 0.2.0
+  version: 0.2.1
 
 requirements:
   build:
@@ -9,6 +9,9 @@ requirements:
     - python
     - conda
     - conda-build
+
+source:
+  git_url: ../
 
 # The build number should be incremented for new builds of the same version
 build:            # (optional)
